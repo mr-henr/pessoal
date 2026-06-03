@@ -52,7 +52,7 @@ function Index() {
           className="animate-fade-up mt-6 max-w-xl font-display italic text-xl sm:text-2xl text-foreground/85"
           style={{ animationDelay: "1.8s" }}
         >
-          A pessoa que mais me entende no mundo
+          quero sempre aprender mais contigo
         </p>
         <div
           className="animate-fade-up mt-16 flex flex-col items-center gap-2 text-gold/70"
