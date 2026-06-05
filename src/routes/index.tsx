@@ -115,7 +115,7 @@ function Index() {
       {/* Rodapé */}
       <footer className="relative px-6 py-16 text-center">
         <p className="font-display italic text-base text-muted-foreground">
-          Você quer ser minha noiva?{" "}
+          Você quer ser meu ultimo amor, minha primeira esposa, mulher que vou passar ate o ultimo segundo da minha vida? Aceita ser minha noiva?{" "}
           <span className="text-gold animate-shimmer inline-block">♥</span>
         </p>
       </footer>
