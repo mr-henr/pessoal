@@ -112,10 +112,33 @@ function Index() {
         </Reveal>
       </section>
 
+      {/* Playlist */}
+      <section className="relative mx-auto max-w-2xl px-6 py-20">
+        <Reveal>
+          <p className="text-center text-xs uppercase tracking-[0.5em] text-gold-soft mb-4">
+            as músicas que você me apresentou
+          </p>
+          <p className="font-display italic text-center text-muted-foreground mb-10">
+            sempre que escuto, lembro de você
+          </p>
+          <div className="overflow-hidden rounded-2xl border border-gold/30 shadow-lg">
+            <iframe
+              title="Nossa Playlist"
+              src="https://open.spotify.com/embed/playlist/0av5DzJO8E5HKIUIEgW8Ef?utm_source=generator&theme=0"
+              width="100%"
+              height="450"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              style={{ border: "none", display: "block" }}
+            />
+          </div>
+        </Reveal>
+      </section>
+
       {/* Rodapé */}
       <footer className="relative px-6 py-16 text-center">
         <p className="font-display italic text-base text-muted-foreground">
-          Você quer ser meu ultimo amor, minha primeira esposa, mulher que vou passar ate o ultimo segundo da minha vida? Aceita ser minha noiva?{" "}
+          Quero que você seja meu ultimo amor, minha primeira esposa, mulher que vou passar ate o ultimo segundo da minha vida. E só por você existir eu acredito em Destino.{" "}
           <span className="text-gold animate-shimmer inline-block">♥</span>
         </p>
       </footer>
