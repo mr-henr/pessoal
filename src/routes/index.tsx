@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { HeartParticles } from "@/components/love/HeartParticles";
 import { Reveal } from "@/components/love/Reveal";
 import { LoveClock } from "@/components/love/LoveClock";
+import { StoryTimeline } from "@/components/love/StoryTimeline";
 
 const photoModules = import.meta.glob<{ default: string }>(
   "/src/components/ui/fotos/*.jpeg",
@@ -80,6 +81,11 @@ function Index() {
             </p>
           </Reveal>
         ))}
+      </section>
+
+      {/* Nossa História */}
+      <section className="relative mx-auto max-w-4xl px-6 py-20">
+        <StoryTimeline />
       </section>
 
       {/* Momentos */}
