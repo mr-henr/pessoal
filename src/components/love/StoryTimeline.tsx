@@ -52,7 +52,7 @@ const entries: StoryEntry[] = [
     type: "photo",
     files: ["foto4.jpeg"],
     date: "Junho de 2025",
-    text: "A gente foi no São João de Campina, passamos dias juntos. Foi engraçado que até teu irmão acabou indo com a gente e curtiu também kkkkk. Nesse período eu me senti ainda mais próximo e conectado contigo, e isso me dava uma felicidade imensa.",
+    text: "A gente foi no São João de Campina, andamos com o pessoal, andamos sozinhos, curtimos, escutamos as musicas lá, nesse período eu me senti ainda mais próximo e conectado contigo, e isso me dava uma felicidade imensa",
   },
   {
     type: "photo",
