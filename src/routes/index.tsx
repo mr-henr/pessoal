@@ -3,6 +3,8 @@ import { HeartParticles } from "@/components/love/HeartParticles";
 import { Reveal } from "@/components/love/Reveal";
 import { LoveClock } from "@/components/love/LoveClock";
 import { StoryTimeline } from "@/components/love/StoryTimeline";
+import { MomentsGallery } from "@/components/love/MomentsGallery";
+import { HiddenLetters } from "@/components/love/HiddenLetters";
 
 const photoModules = import.meta.glob<{ default: string }>(
   "/src/components/ui/fotos/*.jpeg",
@@ -95,20 +97,12 @@ function Index() {
             momentos nossos
           </p>
         </Reveal>
-        <div className="mt-12 columns-2 sm:columns-3 gap-4 space-y-4">
-          {photos.map((src, i) => (
-            <Reveal key={i} delay={i * 60}>
-              <div className="overflow-hidden rounded-lg border border-gold/30 bg-card/40 p-1 break-inside-avoid">
-                <img
-                  src={src}
-                  alt={`Momento ${i + 1}`}
-                  className="w-full rounded-md object-cover"
-                  loading="lazy"
-                />
-              </div>
-            </Reveal>
-          ))}
-        </div>
+        <MomentsGallery photos={photos} />
+      </section>
+
+      {/* Cartas escondidas */}
+      <section className="relative mx-auto max-w-4xl px-6 py-20">
+        <HiddenLetters />
       </section>
 
       {/* Relógio do amor */}

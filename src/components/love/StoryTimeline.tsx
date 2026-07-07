@@ -11,7 +11,7 @@ Object.entries(mediaModules).forEach(([path, mod]) => {
 });
 
 interface StoryEntry {
-  type: "photo" | "video" | "duo";
+  type: "photo" | "video" | "duo" | "gallery";
   files: string[];
   date: string;
   text: string;
@@ -84,6 +84,12 @@ const entries: StoryEntry[] = [
     date: "Janeiro de 2026",
     text: "Nossa primeira trilha juntos. Eu me diverti muito e espero que façamos muitas outras ainda mais incríveis.",
   },
+  {
+    type: "gallery",
+    files: ["video5.mp4", "foto9.jpeg", "foto10.jpeg", "foto11.jpeg", "foto12.jpeg"],
+    date: "Julho de 2026",
+    text: "Fomos a um show juntos e foi uma daquelas noites que eu queria poder congelar. A gente se arrumou, tirou foto antes de sair, curtiu do camarote, e no meio de tudo aquilo eu só conseguia te olhar e pensar o quanto te amo. Cada música, cada abraço, cada beijo no meio da multidão — eu quero viver mil noites assim ao teu lado.",
+  },
 ];
 
 function MediaBlock({ entry }: { entry: StoryEntry }) {
@@ -110,6 +116,31 @@ function MediaBlock({ entry }: { entry: StoryEntry }) {
         playsInline
         className="w-full rounded-md"
       />
+    );
+  }
+  if (entry.type === "gallery") {
+    return (
+      <div className="grid grid-cols-2 gap-2">
+        {entry.files.map((f) =>
+          f.endsWith(".mp4") ? (
+            <video
+              key={f}
+              src={media[f]}
+              controls
+              playsInline
+              className="col-span-2 w-full rounded-md"
+            />
+          ) : (
+            <img
+              key={f}
+              src={media[f]}
+              alt={f}
+              className="w-full rounded-md object-cover aspect-square"
+              loading="lazy"
+            />
+          )
+        )}
+      </div>
     );
   }
   return (
