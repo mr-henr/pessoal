@@ -23,9 +23,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Node 24 (npm 11) — mesma versão usada no desenvolvimento. O Node 20
+      # trazia npm 10, que lia este package-lock.json de forma diferente e
+      # quebrava o `npm ci`. O TanStack também exige Node >= 22.12.
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: "npm"
 
       - run: npm ci
