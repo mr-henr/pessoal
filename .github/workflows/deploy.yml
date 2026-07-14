@@ -31,6 +31,8 @@ jobs:
       - run: npm ci
 
       - run: npm run build
+        env:
+          VITE_FIREBASE_CONFIG: ${{ secrets.VITE_FIREBASE_CONFIG }}
 
       - uses: actions/configure-pages@v4
         with:

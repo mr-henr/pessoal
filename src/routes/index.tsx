@@ -5,6 +5,9 @@ import { LoveClock } from "@/components/love/LoveClock";
 import { StoryTimeline } from "@/components/love/StoryTimeline";
 import { MomentsGallery } from "@/components/love/MomentsGallery";
 import { HiddenLetters } from "@/components/love/HiddenLetters";
+import { PlacesMap } from "@/components/love/PlacesMap";
+import { WishList } from "@/components/love/WishList";
+import { EnvelopeIntro } from "@/components/love/EnvelopeIntro";
 
 const photoModules = import.meta.glob<{ default: string }>(
   "/src/components/ui/fotos/*.jpeg",
@@ -26,6 +29,8 @@ const letters = [
 function Index() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-background text-foreground">
+      <EnvelopeIntro />
+
       {/* Glow ambiente */}
       <div
         className="pointer-events-none absolute inset-0 -z-10"
@@ -103,6 +108,16 @@ function Index() {
       {/* Cartas escondidas */}
       <section className="relative mx-auto max-w-4xl px-6 py-20">
         <HiddenLetters />
+      </section>
+
+      {/* Nossos lugares */}
+      <section className="relative mx-auto max-w-4xl px-6 py-20">
+        <PlacesMap />
+      </section>
+
+      {/* O que ainda quero viver contigo */}
+      <section className="relative mx-auto max-w-4xl px-6 py-20">
+        <WishList />
       </section>
 
       {/* Relógio do amor */}
