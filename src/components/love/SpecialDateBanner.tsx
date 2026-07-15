@@ -10,7 +10,12 @@ import { useSpecialDate } from "@/hooks/use-special-date";
  */
 export function SpecialDateBanner() {
   const special = useSpecialDate();
-  const dismissKey = special ? `special:${special.id}:${new Date().getFullYear()}` : "";
+  // No modo prévia (?preview=) o cartão sempre aparece, sem lembrar o "fechar".
+  const isPreview =
+    typeof window !== "undefined" &&
+    new URLSearchParams(window.location.search).has("preview");
+  const dismissKey =
+    special && !isPreview ? `special:${special.id}:${new Date().getFullYear()}` : "";
   const [dismissed, setDismissed] = useState(
     () => !!dismissKey && typeof sessionStorage !== "undefined" && !!sessionStorage.getItem(dismissKey),
   );
