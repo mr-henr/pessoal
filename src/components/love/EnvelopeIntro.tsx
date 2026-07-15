@@ -1,18 +1,21 @@
 import { useEffect, useState } from "react";
 
 const SEEN_KEY = "envelope:visto";
+const INTERVALO_MS = 3 * 60 * 60 * 1000; // reaparece a cada 3 horas
 
 type Phase = "fechado" | "abrindo" | "saindo" | "oculto";
 
 /**
  * Abertura em envelope: overlay dourado que abre ao clique e revela o site.
- * Aparece uma vez por sessão — vira um ritual de chegada, sem irritar a cada refresh.
+ * Reaparece a cada 3 horas no mesmo aparelho — vira um ritual de chegada.
+ * Guia anônima (sem localStorage salvo) mostra sempre.
  */
 export function EnvelopeIntro() {
   const [phase, setPhase] = useState<Phase>("oculto");
 
   useEffect(() => {
-    if (sessionStorage.getItem(SEEN_KEY)) return;
+    const visto = Number(localStorage.getItem(SEEN_KEY) ?? 0);
+    if (Date.now() - visto < INTERVALO_MS) return;
     setPhase("fechado");
     document.body.style.overflow = "hidden";
     return () => {
@@ -23,7 +26,8 @@ export function EnvelopeIntro() {
   function abrir() {
     if (phase !== "fechado") return;
     setPhase("abrindo");
-    sessionStorage.setItem(SEEN_KEY, "1");
+    // Carimba o horário da abertura: só reaparece 3h depois deste momento.
+    localStorage.setItem(SEEN_KEY, String(Date.now()));
     setTimeout(() => setPhase("saindo"), 1100);
     setTimeout(() => {
       setPhase("oculto");

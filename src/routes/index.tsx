@@ -8,6 +8,7 @@ import { HiddenLetters } from "@/components/love/HiddenLetters";
 import { PlacesMap } from "@/components/love/PlacesMap";
 import { WishList } from "@/components/love/WishList";
 import { EnvelopeIntro } from "@/components/love/EnvelopeIntro";
+import { SpecialDateBanner } from "@/components/love/SpecialDateBanner";
 
 const photoModules = import.meta.glob<{ default: string }>(
   "/src/components/ui/fotos/*.jpeg",
@@ -30,6 +31,7 @@ function Index() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-background text-foreground">
       <EnvelopeIntro />
+      <SpecialDateBanner />
 
       {/* Glow ambiente */}
       <div

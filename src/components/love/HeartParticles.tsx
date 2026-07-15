@@ -1,20 +1,26 @@
 import { useMemo } from "react";
 
+interface HeartParticlesProps {
+  count?: number;
+  /** Modo comemoração: mais denso, rápido e brilhante. */
+  intense?: boolean;
+}
+
 /** Sutis corações/brilhos dourados subindo no fundo. */
-export function HeartParticles({ count = 18 }: { count?: number }) {
+export function HeartParticles({ count = 18, intense = false }: HeartParticlesProps) {
   const particles = useMemo(
     () =>
       Array.from({ length: count }, (_, i) => ({
         id: i,
         left: Math.random() * 100,
-        size: 8 + Math.random() * 14,
-        duration: 14 + Math.random() * 14,
-        delay: Math.random() * 18,
+        size: intense ? 12 + Math.random() * 20 : 8 + Math.random() * 14,
+        duration: intense ? 6 + Math.random() * 8 : 14 + Math.random() * 14,
+        delay: Math.random() * (intense ? 8 : 18),
         drift: `${(Math.random() - 0.5) * 120}px`,
-        opacity: 0.25 + Math.random() * 0.45,
+        opacity: intense ? 0.5 + Math.random() * 0.5 : 0.25 + Math.random() * 0.45,
         kind: Math.random() > 0.5 ? "heart" : "spark",
       })),
-    [count],
+    [count, intense],
   );
 
   return (
