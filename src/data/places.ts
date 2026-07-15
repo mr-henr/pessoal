@@ -20,9 +20,17 @@ export const places: Place[] = [
   {
     id: "campina-sao-joao",
     nome: "São João de Campina Grande",
-    coords: [-7.2216, -35.8817],
+    coords: [-7.2236996571395204, -35.88755686572316],
     texto:
-      "Andamos com o pessoal, andamos sozinhos, escutamos as músicas de lá. Foi onde eu me senti ainda mais próximo e conectado contigo.",
+      "A gente andou com o pessoal, andou sozinho também, escutou as músicas de lá e curtiu demais. Foi aqui que eu me senti ainda mais perto de você — e isso me deixava feliz que só.",
+    feito: true,
+  },
+  {
+    id: "pdp",
+    nome: "PDP — Praça da Paz",
+    coords: [-7.146721583263933, -34.84330437681256],
+    texto:
+      "Foi a primeira vez que eu fui na PDP, e fui contigo. A gente bebeu, curtiu, foi uma noite dahora. Desde então esse lugar sempre me lembra você — eu conheci ele contigo.",
     feito: true,
   },
   {
@@ -30,51 +38,47 @@ export const places: Place[] = [
     nome: "Orla de João Pessoa",
     coords: [-7.1478, -34.7958],
     texto:
-      "O restaurante perto da orla, nos nossos 2 anos. A demora pra entrar foi enorme — e cada segundo do teu lado foi perfeito.",
+      "A gente pegou a bike e andou pela orla bem longe. Me diverti demais, me senti leve e feliz do teu lado, sem nada de mais — só a gente e o vento.",
     feito: true,
   },
   {
     id: "dique-cabedelo",
     nome: "Dique de Cabedelo",
-    coords: [-6.9736, -34.8384],
-    texto: "Riscamos esse da lista juntos. O primeiro de muitos.",
-    feito: true,
-  },
-  {
-    id: "pdp",
-    nome: "PDP — Praça da Paz",
-    coords: [-7.1401, -34.8462],
+    coords: [-6.960996898029213, -34.843100363322556],
     texto:
-      "Foi a primeira vez que eu fui na PDP — e eu fui contigo. Bebemos, curtimos, foi uma noite dahora. Desde então esse lugar sempre me remete a você: eu conheci ele contigo.",
+      "Riscamos esse da nossa lista juntos. O primeiro de muitos que ainda quero fazer contigo.",
     feito: true,
   },
   {
     id: "lucena-trilha",
     nome: "Trilha de Lucena",
-    coords: [-6.9033, -34.8717],
+    coords: [-6.877115360267099, -34.89654252099516],
     texto:
-      "Nossa primeira trilha juntos: a igreja antiga com a árvore que virou parte da parede, o mirante de frente pro mar. Eu me diverti muito — e quero fazer muitas outras contigo.",
+      "Nossa primeira trilha juntos. Começou nas ruínas da antiga Igreja do Bom Sucesso — tinha aquela árvore que virou parte da parede — e a gente foi indo até um mirante de frente pro mar. Me diverti pra caramba e quero fazer muitas outras contigo.",
     feito: true,
   },
   {
     id: "acude-velho",
     nome: "Açude Velho",
-    coords: [-7.2274, -35.8869],
-    texto: "Ainda quero andar contigo por aqui, sem pressa nenhuma.",
+    coords: [-7.225757273616172, -35.87980659201566],
+    texto:
+      "Ainda quero andar por aqui contigo, sem pressa nenhuma, só curtindo o tempo do teu lado.",
     feito: false,
   },
   {
     id: "jardim-botanico",
     nome: "Jardim Botânico",
     coords: [-7.1697, -34.846],
-    texto: "Conhecer esse lugar contigo está na nossa lista.",
+    texto:
+      "Conhecer esse lugar contigo tá na nossa lista. Quero andar por aqui e ver tudo com você.",
     feito: false,
   },
   {
     id: "pico-do-jabre",
     nome: "Pico do Jabre",
-    coords: [-7.2597, -37.3861],
-    texto: "O ponto mais alto da Paraíba. Quero ver essa vista ao teu lado.",
+    coords: [-7.253020367912497, -37.384184677819626],
+    texto:
+      "É o ponto mais alto da Paraíba. Um dia eu quero ver essa vista com você do meu lado.",
     feito: false,
   },
 

@@ -13,13 +13,6 @@ export function EnvelopeIntro() {
 
   useEffect(() => {
     if (sessionStorage.getItem(SEEN_KEY)) return;
-    const semAnimacao = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-    if (semAnimacao) {
-      sessionStorage.setItem(SEEN_KEY, "1");
-      return;
-    }
     setPhase("fechado");
     document.body.style.overflow = "hidden";
     return () => {
